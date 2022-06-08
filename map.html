@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>map</title>
+        <link rel="stylesheet" href="css/mapStyle.css" />
+    </head>
+    <body onload="initMap()">
+        <div class="mapAndLocations">
+            <div class="map"></div>
+            <div class="locations">saved locations!</div>
+        </div>
+        <div class="info">
+            <h2>Current Position:</h2>
+            <table border="1" class="timeTable">
+                <tr>
+                    <td>Latitude</td>
+                    <td id="latitude"></td>
+                </tr>
+                <tr>
+                    <td>Longitude</td>
+                    <td id="longitude"></td>
+                </tr>
+                <tr>
+                    <td>Accuracy</td>
+                    <td id="accuracy"></td>
+                </tr>
+                <tr>
+                    <td>Timestamp</td>
+                    <td id="timestamp"></td>
+                </tr>
+            </table>
+        </div>
+        <a href="index.html">to the main page</a>
+
+        <img class="locationPng" src="img/myLocate.png" alt="location pic" onclick="loadCurrLocation()" />
+        <p id="locationError"></p>
+
+        <script src="services/utilService.js"></script>
+        <script src="services/storageService.js"></script>
+        <script src="services/placeService.js"></script>
+        <script src="place.keeper.controller.js"></script>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAidTp9Qx_P-VgvxNEus4ISPbawKlSoHQg&callback=mapReady"></script>
+    </body>
+</html>

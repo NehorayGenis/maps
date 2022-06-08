@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>user Settings</title>
+        <link rel="stylesheet" href="css/userSettingsStyle.css" />
+    </head>
+    <body>
+        <form onsubmit="setData(event)">
+            <section class="info">
+                <div class="mail">
+                    <label for="email">E-mail:</label>
+                    <input class="usr" type="email" name="email" />
+                </div>
+                <div class="age">
+                    <label for="age">Age:</label>
+
+                    <input type="range" class="age" name="age" step="1" min="18" max="120" value="26" onchange="showAge(this.value);" />
+                    <span class="sAge">26</span>
+                </div>
+                <div class="bDay">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" class="dob" name="dob" />
+                </div>
+                <div class="gender">
+                    <label for="gender">gender:</label>
+                    <input type="text" class="gender" name="gender" />
+                </div>
+                <div class="bHour">
+                    <label for="bDayHour">Select a time:</label>
+                    <input type="time" class="bDayHour" name="bDayHour" />
+                </div>
+                <h3>Colors-</h3>
+                <div class="bcColor">
+                    <label for="favcolor">Select your background color:</label>
+                    <input type="color" class="favcolor" name="bgColor" value="#ff0000" />
+                </div>
+                <div class="fontColor">
+                    <label for="favcolor">Select your font color:</label>
+                    <input type="color" class="favcolor" name="fontColor" value="#ff0000" />
+                </div>
+                <button class="set">Set</button>
+                <a href="index.html">to the main page</a>
+            </section>
+        </form>
+
+        <script src="lib/jquery.js"></script>
+        <script src="services/storageService.js"></script>
+        <script src="services/utilService.js"></script>
+        <script src="services/userService.js"></script>
+    </body>
+</html>
